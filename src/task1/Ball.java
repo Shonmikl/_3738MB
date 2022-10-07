@@ -6,12 +6,11 @@ public class Ball {
     public Ball(String colour) {
         this.colour = colour;
     }
-}
 
-class IceCream {
-    String type;
-
-    public IceCream(String type) {
-        this.type = type;
+    @Override
+    public String toString() {
+        return "Ball{" +
+                "colour='" + colour + '\'' +
+                '}';
     }
 }

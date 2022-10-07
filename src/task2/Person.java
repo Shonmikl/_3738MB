@@ -3,6 +3,8 @@ package task2;
 import task1.Ball;
 import task1.Lighter;
 
+import java.util.Scanner;
+
 public class Person {
 
     String name;
@@ -25,13 +27,29 @@ public class Person {
         this.language = language;
         this.lighter = lighter;
     }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", location='" + location + '\'' +
+                ", language=" + language +
+                ", ball=" + ball +
+                ", lighter=" + lighter +
+                '}';
+    }
 }
 
 class Main {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
         Person person =
-                new Person("Artur", "Manchester", Language.JAVA, new Ball("BLACK"));
-        Person person1 =
-                new Person("Artur", "Manchester", Language.JAVA, new Lighter(200));
+                new Person("Artur", "scanner.next()", Language.JAVA, new Ball("BLACK"));
+        System.out.println(person);
+//        String s = "abc";
+//        System.out.println(s);
+//
+//        int i = 333;
+//        System.out.println(i);
     }
 }
